@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "evmHj2Q1N5BCWMuBZbmW62nhaxoBX+A59AqNMO+a9gjii2yRlt3tfWB7rTgizYOK9g1MPCWfmps2E580CUxS4Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe.iOS\\Safe.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\egome\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.licensing\\19.1.0.67\\syncfusion.licensing.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.core\\19.1.0.67\\syncfusion.xamarin.core.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.datasource\\19.1.0.67\\syncfusion.xamarin.datasource.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.1.0.67\\syncfusion.xamarin.gridcommon.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\19.1.0.67\\syncfusion.xamarin.sfbusyindicator.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.sflistview\\19.1.0.67\\syncfusion.xamarin.sflistview.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\syncfusion.xamarin.sfpopuplayout\\19.1.0.67\\syncfusion.xamarin.sfpopuplayout.19.1.0.67.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\egome\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

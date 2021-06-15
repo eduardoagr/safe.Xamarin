@@ -1,0 +1,15 @@
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.csprojAssemblyReference.cache
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.AssemblyInfoInputs.cache
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.AssemblyInfo.cs
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.csproj.CoreCompileInputs.cache
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.dll
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\ref\Safe.dll
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.pdb
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\bin\Debug\netstandard2.0\Safe.deps.json
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\bin\Debug\netstandard2.0\Safe.dll
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\bin\Debug\netstandard2.0\ref\Safe.dll
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\bin\Debug\netstandard2.0\Safe.pdb
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\egome\Documents\GitRepos\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.csproj.Fody.CopyLocal.cache

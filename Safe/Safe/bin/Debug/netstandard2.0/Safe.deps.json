@@ -1,0 +1,272 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Safe/1.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "PropertyChanged.Fody": "3.4.0",
+          "Syncfusion.Licensing": "19.1.0.67",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.67",
+          "Syncfusion.Xamarin.SfListView": "19.1.0.67",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.67",
+          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "runtime": {
+          "Safe.dll": {}
+        }
+      },
+      "Fody/6.5.1": {},
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "PropertyChanged.Fody/3.4.0": {
+        "dependencies": {
+          "Fody": "6.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/19.1.0.67": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "19.1.0.67",
+            "fileVersion": "19.1.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.67",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.DataSource": "19.1.0.67",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.67",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfPopupLayout.XForms.dll": {
+            "assemblyVersion": "19.1451.0.67",
+            "fileVersion": "19.1451.0.67"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.6.1": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/5.0.0.2012": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          }
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Safe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fody/6.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+      "path": "fody/6.5.1",
+      "hashPath": "fody.6.5.1.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAZyq0uolKo2WYm4mjx+q7A8fSGFT0x2e1s3y+ODn4JI0kqTDoo9GF2tdaypUzRFJZfdMxfC5HZW9QzdJLtOnA==",
+      "path": "propertychanged.fody/3.4.0",
+      "hashPath": "propertychanged.fody.3.4.0.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4cdYZvWDJvKLJR2C72KBFODhV/yYW71lW+w7QZL6/kMVlw/Cq71xJLWUU9jZGa2DeB+NA46g1o7gqPdy5Gan0g==",
+      "path": "syncfusion.licensing/19.1.0.67",
+      "hashPath": "syncfusion.licensing.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+Kbrd2JusPMrevPH0X2n+rDgDlJgqndnd3ld8zwGw4zDk7S5sBNSFI87vfRioSRR03yKtjqYaIE1e93z1C2+mQ==",
+      "path": "syncfusion.xamarin.core/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.core.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IOkqTGxOtZsnI7a0uy2qwcOO9zQpxW2JkDnmU4JVaL52k7pdgVN3uZT8thAOmcPJgDTZd1vnOD2VdxUmcaxikA==",
+      "path": "syncfusion.xamarin.datasource/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.datasource.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XjFUwuy/V9pBk3+L7tgd8qZbSILJf01ky3wRf3infuAIf8+M4akY+AWTFtLxDYssPPQTEsl4uQAqHpBZxY292Q==",
+      "path": "syncfusion.xamarin.gridcommon/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.gridcommon.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tmSo3qU6rcO9YwQ3yDLWd/aVF5gYL8Oo51dIRB4xrZVXIG8i/Yh1ZaLEuCFADgwWYu5ndBWWylj11Y4hn6ONBQ==",
+      "path": "syncfusion.xamarin.sfbusyindicator/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.sfbusyindicator.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QSzUT5HVvF/CPEx1zVuvIqtvCw9FICaaufiXYcsRX3TqxC8O5GpYkONSaQlw97+/ztxd0G3cpPW5T4fr5RKo9g==",
+      "path": "syncfusion.xamarin.sflistview/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.sflistview.19.1.0.67.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bvTQACzxSXBUPSa1qQssnhuQMQg5rk/tsIvOijc32rGvcqn6UW/OS8UqGhbuCReTXpSEyL5lI+NFTGmSAI3/Sw==",
+      "path": "syncfusion.xamarin.sfpopuplayout/19.1.0.67",
+      "hashPath": "syncfusion.xamarin.sfpopuplayout.19.1.0.67.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+      "path": "xamarin.essentials/1.6.1",
+      "hashPath": "xamarin.essentials.1.6.1.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+      "path": "xamarin.forms/5.0.0.2012",
+      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
+      "path": "xamarin.forms.visual.material/5.0.0.2012",
+      "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
+    }
+  }
+}

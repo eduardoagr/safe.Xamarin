@@ -2,10 +2,43 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Acr.UserDialogs/7.1.0.514": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "1.3.1"
+        },
+        "compile": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.3.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        }
+      },
       "Fody/6.5.1": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "PropertyChanged.Fody/3.4.0": {
@@ -23,7 +56,7 @@
           "build/PropertyChanged.Fody.props": {}
         }
       },
-      "Syncfusion.Licensing/19.1.0.67": {
+      "Syncfusion.Licensing/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -32,10 +65,25 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.1.0.67": {
+      "Syncfusion.Xamarin.Cards/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/19.1.0.69": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -47,7 +95,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+      "Syncfusion.Xamarin.DataSource/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -56,7 +104,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+      "Syncfusion.Xamarin.GridCommon/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -65,10 +113,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -82,12 +130,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+      "Syncfusion.Xamarin.SfListView/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
-          "Syncfusion.Xamarin.DataSource": "19.1.0.67",
-          "Syncfusion.Xamarin.GridCommon": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Syncfusion.Xamarin.DataSource": "19.1.0.69",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -99,10 +147,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -288,11 +336,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.514",
+          "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.4.0",
-          "Syncfusion.Licensing": "19.1.0.67",
-          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.67",
-          "Syncfusion.Xamarin.SfListView": "19.1.0.67",
-          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.67",
+          "Syncfusion.Licensing": "19.1.0.69",
+          "Syncfusion.Xamarin.Cards": "19.1.0.69",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.69",
+          "Syncfusion.Xamarin.SfListView": "19.1.0.69",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.69",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.Visual.Material": "5.0.0.2012"
@@ -306,10 +357,43 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Acr.UserDialogs/7.1.0.514": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "1.3.1"
+        },
+        "compile": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.3.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        }
+      },
       "Fody/6.5.1": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "PropertyChanged.Fody/3.4.0": {
@@ -327,7 +411,7 @@
           "build/PropertyChanged.Fody.props": {}
         }
       },
-      "Syncfusion.Licensing/19.1.0.67": {
+      "Syncfusion.Licensing/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -336,10 +420,25 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.1.0.67": {
+      "Syncfusion.Xamarin.Cards/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/19.1.0.69": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -351,7 +450,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+      "Syncfusion.Xamarin.DataSource/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -360,7 +459,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+      "Syncfusion.Xamarin.GridCommon/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -369,10 +468,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -386,12 +485,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+      "Syncfusion.Xamarin.SfListView/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
-          "Syncfusion.Xamarin.DataSource": "19.1.0.67",
-          "Syncfusion.Xamarin.GridCommon": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Syncfusion.Xamarin.DataSource": "19.1.0.69",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -403,10 +502,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -592,11 +691,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.514",
+          "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.4.0",
-          "Syncfusion.Licensing": "19.1.0.67",
-          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.67",
-          "Syncfusion.Xamarin.SfListView": "19.1.0.67",
-          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.67",
+          "Syncfusion.Licensing": "19.1.0.69",
+          "Syncfusion.Xamarin.Cards": "19.1.0.69",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.69",
+          "Syncfusion.Xamarin.SfListView": "19.1.0.69",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.69",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.Visual.Material": "5.0.0.2012"
@@ -610,10 +712,43 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Acr.UserDialogs/7.1.0.514": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "1.3.1"
+        },
+        "compile": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.3.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        }
+      },
       "Fody/6.5.1": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "PropertyChanged.Fody/3.4.0": {
@@ -631,7 +766,7 @@
           "build/PropertyChanged.Fody.props": {}
         }
       },
-      "Syncfusion.Licensing/19.1.0.67": {
+      "Syncfusion.Licensing/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -640,10 +775,25 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.1.0.67": {
+      "Syncfusion.Xamarin.Cards/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/19.1.0.69": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -655,7 +805,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+      "Syncfusion.Xamarin.DataSource/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -664,7 +814,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+      "Syncfusion.Xamarin.GridCommon/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -673,10 +823,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -690,12 +840,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+      "Syncfusion.Xamarin.SfListView/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
-          "Syncfusion.Xamarin.DataSource": "19.1.0.67",
-          "Syncfusion.Xamarin.GridCommon": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Syncfusion.Xamarin.DataSource": "19.1.0.69",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -707,10 +857,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -896,11 +1046,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.514",
+          "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.4.0",
-          "Syncfusion.Licensing": "19.1.0.67",
-          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.67",
-          "Syncfusion.Xamarin.SfListView": "19.1.0.67",
-          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.67",
+          "Syncfusion.Licensing": "19.1.0.69",
+          "Syncfusion.Xamarin.Cards": "19.1.0.69",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.69",
+          "Syncfusion.Xamarin.SfListView": "19.1.0.69",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.69",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.Visual.Material": "5.0.0.2012"
@@ -914,10 +1067,43 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Acr.UserDialogs/7.1.0.514": {
+        "type": "package",
+        "dependencies": {
+          "BTProgressHUD": "1.3.1"
+        },
+        "compile": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.3.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/BTProgressHUD.dll": {}
+        }
+      },
       "Fody/6.5.1": {
         "type": "package",
         "build": {
           "build/Fody.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "PropertyChanged.Fody/3.4.0": {
@@ -935,7 +1121,7 @@
           "build/PropertyChanged.Fody.props": {}
         }
       },
-      "Syncfusion.Licensing/19.1.0.67": {
+      "Syncfusion.Licensing/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
@@ -944,10 +1130,25 @@
           "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.1.0.67": {
+      "Syncfusion.Xamarin.Cards/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/19.1.0.69": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -959,7 +1160,7 @@
           "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.DataSource/19.1.0.67": {
+      "Syncfusion.Xamarin.DataSource/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
@@ -968,7 +1169,7 @@
           "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
+      "Syncfusion.Xamarin.GridCommon/19.1.0.69": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
@@ -977,10 +1178,10 @@
           "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
+      "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -994,12 +1195,12 @@
           "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfListView/19.1.0.67": {
+      "Syncfusion.Xamarin.SfListView/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
-          "Syncfusion.Xamarin.DataSource": "19.1.0.67",
-          "Syncfusion.Xamarin.GridCommon": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
+          "Syncfusion.Xamarin.DataSource": "19.1.0.69",
+          "Syncfusion.Xamarin.GridCommon": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -1011,10 +1212,10 @@
           "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
         }
       },
-      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
+      "Syncfusion.Xamarin.SfPopupLayout/19.1.0.69": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Xamarin.Core": "19.1.0.67",
+          "Syncfusion.Xamarin.Core": "19.1.0.69",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -1200,11 +1401,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.514",
+          "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.4.0",
-          "Syncfusion.Licensing": "19.1.0.67",
-          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.67",
-          "Syncfusion.Xamarin.SfListView": "19.1.0.67",
-          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.67",
+          "Syncfusion.Licensing": "19.1.0.69",
+          "Syncfusion.Xamarin.Cards": "19.1.0.69",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.1.0.69",
+          "Syncfusion.Xamarin.SfListView": "19.1.0.69",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.1.0.69",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.Visual.Material": "5.0.0.2012"
@@ -1219,6 +1423,57 @@
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.1.0.514": {
+      "sha512": "jSjxoOtwS4qHXRpRJxt5anCwRxga+RK22N0w/hR4wLwmxfVBv7eVHX+BsMYFF/Qe6SJGO5dJDcIyh/7+gbEkCA==",
+      "type": "package",
+      "path": "acr.userdialogs/7.1.0.514",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.1.0.514.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
+    "BTProgressHUD/1.3.1": {
+      "sha512": "3NLBJFd039vRplgww5tiGdlTU5ztLD5LvB6Fjr62y1Ov/cKRkpe7jEDWX/TwyYTKyLwk5BQ+Kzs4HVm72QyAvQ==",
+      "type": "package",
+      "path": "btprogresshud/1.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NOTICE",
+        "btprogresshud.1.3.1.nupkg.sha512",
+        "btprogresshud.nuspec",
+        "lib/xamarinios10/BTProgressHUD.dll",
+        "lib/xamarinios10/BTProgressHUD.pdb",
+        "lib/xamarinios10/BTProgressHUD.xml"
+      ]
+    },
     "Fody/6.5.1": {
       "sha512": "DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
       "type": "package",
@@ -1252,6 +1507,33 @@
         "netstandardtask/Mono.Cecil.pdb"
       ]
     },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "PropertyChanged.Fody/3.4.0": {
       "sha512": "IAZyq0uolKo2WYm4mjx+q7A8fSGFT0x2e1s3y+ODn4JI0kqTDoo9GF2tdaypUzRFJZfdMxfC5HZW9QzdJLtOnA==",
       "type": "package",
@@ -1274,10 +1556,10 @@
         "weaver/PropertyChanged.Fody.xcf"
       ]
     },
-    "Syncfusion.Licensing/19.1.0.67": {
-      "sha512": "4cdYZvWDJvKLJR2C72KBFODhV/yYW71lW+w7QZL6/kMVlw/Cq71xJLWUU9jZGa2DeB+NA46g1o7gqPdy5Gan0g==",
+    "Syncfusion.Licensing/19.1.0.69": {
+      "sha512": "XbTWCcu7VkjbhIOFoAdheUTVyU6IruXlzmmBuCSKyUqVzMRxXKDadPD4hm8ObPBG9AwNcrG2B5ntL/xJAkNXWw==",
       "type": "package",
-      "path": "syncfusion.licensing/19.1.0.67",
+      "path": "syncfusion.licensing/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1299,14 +1581,42 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.19.1.0.67.nupkg.sha512",
+        "syncfusion.licensing.19.1.0.69.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/19.1.0.67": {
-      "sha512": "+Kbrd2JusPMrevPH0X2n+rDgDlJgqndnd3ld8zwGw4zDk7S5sBNSFI87vfRioSRR03yKtjqYaIE1e93z1C2+mQ==",
+    "Syncfusion.Xamarin.Cards/19.1.0.69": {
+      "sha512": "cymC1peM8tz52yeeZmn5192AmwqZQBQiS/vEDoi+gC+xDMsntJ/FsPOQ/9MYTiXmpqWIo/oNY/qfUeKXtFGPNw==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/19.1.0.67",
+      "path": "syncfusion.xamarin.cards/19.1.0.69",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.Cards.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Cards.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Cards.XForms.xml",
+        "lib/MonoAndroid90/Syncfusion.Cards.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.Cards.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.Cards.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Cards.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Cards.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Cards.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Cards.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Cards.XForms.xml",
+        "lib/uap10.0/Syncfusion.Cards.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Cards.XForms.UWP.xml",
+        "lib/uap10.0/Syncfusion.Cards.XForms.dll",
+        "lib/uap10.0/Syncfusion.Cards.XForms.xml",
+        "syncfusion.xamarin.cards.19.1.0.69.nupkg.sha512",
+        "syncfusion.xamarin.cards.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/19.1.0.69": {
+      "sha512": "cFaQE+R1GNNx4iHXC2UOTQm2D33ZMqnmSa21TqBjqaBLWPoBeDadId+uQtDnu1Yf83NKsK9faDzkiNOKeTWaJQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1334,14 +1644,14 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.core.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.DataSource/19.1.0.67": {
-      "sha512": "IOkqTGxOtZsnI7a0uy2qwcOO9zQpxW2JkDnmU4JVaL52k7pdgVN3uZT8thAOmcPJgDTZd1vnOD2VdxUmcaxikA==",
+    "Syncfusion.Xamarin.DataSource/19.1.0.69": {
+      "sha512": "0BMjeaoctesAvGB3ufSJQGPxmIBbXAecMlVt06bJEr/emRkdM5Gyvub6QEBb1L4wKkk3x46WlEvcudj4SXviWQ==",
       "type": "package",
-      "path": "syncfusion.xamarin.datasource/19.1.0.67",
+      "path": "syncfusion.xamarin.datasource/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1357,14 +1667,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
         "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
         "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
-        "syncfusion.xamarin.datasource.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.datasource.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.datasource.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.GridCommon/19.1.0.67": {
-      "sha512": "XjFUwuy/V9pBk3+L7tgd8qZbSILJf01ky3wRf3infuAIf8+M4akY+AWTFtLxDYssPPQTEsl4uQAqHpBZxY292Q==",
+    "Syncfusion.Xamarin.GridCommon/19.1.0.69": {
+      "sha512": "PFfMXbPgDGJJ33qL/nj56W4seWz6SHgzs9J4UR6bShjJa9Gt3PtPj6EvoanGGy14KDYOj+N0IO80MpHU2/zUxA==",
       "type": "package",
-      "path": "syncfusion.xamarin.gridcommon/19.1.0.67",
+      "path": "syncfusion.xamarin.gridcommon/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1382,14 +1692,14 @@
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
         "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
-        "syncfusion.xamarin.gridcommon.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.gridcommon.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.67": {
-      "sha512": "tmSo3qU6rcO9YwQ3yDLWd/aVF5gYL8Oo51dIRB4xrZVXIG8i/Yh1ZaLEuCFADgwWYu5ndBWWylj11Y4hn6ONBQ==",
+    "Syncfusion.Xamarin.SfBusyIndicator/19.1.0.69": {
+      "sha512": "Hbqx2RZyYRhfTLI1gyuUhb5yz24bRYnDytQAhSYbSEPFWWvAK87XUTwW8vj9x35/91wS5iHt/Yra8JbG0/wb/A==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfbusyindicator/19.1.0.67",
+      "path": "syncfusion.xamarin.sfbusyindicator/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1416,14 +1726,14 @@
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
         "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
-        "syncfusion.xamarin.sfbusyindicator.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfListView/19.1.0.67": {
-      "sha512": "QSzUT5HVvF/CPEx1zVuvIqtvCw9FICaaufiXYcsRX3TqxC8O5GpYkONSaQlw97+/ztxd0G3cpPW5T4fr5RKo9g==",
+    "Syncfusion.Xamarin.SfListView/19.1.0.69": {
+      "sha512": "HCzMoiorwBmbz/HepD+WRrpck91L8LS/E8d5ga8BjaZY680Gfvgw/xS21hUSzJ+V7klCtRo968Lu8rhtCEua+Q==",
       "type": "package",
-      "path": "syncfusion.xamarin.sflistview/19.1.0.67",
+      "path": "syncfusion.xamarin.sflistview/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1446,14 +1756,14 @@
         "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
         "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
-        "syncfusion.xamarin.sflistview.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.SfPopupLayout/19.1.0.67": {
-      "sha512": "bvTQACzxSXBUPSa1qQssnhuQMQg5rk/tsIvOijc32rGvcqn6UW/OS8UqGhbuCReTXpSEyL5lI+NFTGmSAI3/Sw==",
+    "Syncfusion.Xamarin.SfPopupLayout/19.1.0.69": {
+      "sha512": "YmMTiTFaeheu3hUBYZtORorKJkvLhwN8IbJTeO3IEeIvErwKZg0hOYGMsDHlubVcK2F/282I/jVAxtug8R42VA==",
       "type": "package",
-      "path": "syncfusion.xamarin.sfpopuplayout/19.1.0.67",
+      "path": "syncfusion.xamarin.sfpopuplayout/19.1.0.69",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1482,7 +1792,7 @@
         "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.UWP/Syncfusion.SfPopupLayout.XForms.UWP/Resources/popup_forms_uwp_close_icon.png",
         "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.dll",
         "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.xml",
-        "syncfusion.xamarin.sfpopuplayout.19.1.0.67.nupkg.sha512",
+        "syncfusion.xamarin.sfpopuplayout.19.1.0.69.nupkg.sha512",
         "syncfusion.xamarin.sfpopuplayout.nuspec"
       ]
     },
@@ -1843,12 +2153,14 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Acr.UserDialogs >= 7.1.0.514",
       "PropertyChanged.Fody >= 3.4.0",
       "Safe >= 1.0.0",
-      "Syncfusion.Licensing >= 19.1.0.67",
-      "Syncfusion.Xamarin.SfBusyIndicator >= 19.1.0.67",
-      "Syncfusion.Xamarin.SfListView >= 19.1.0.67",
-      "Syncfusion.Xamarin.SfPopupLayout >= 19.1.0.67",
+      "Syncfusion.Licensing >= 19.1.0.69",
+      "Syncfusion.Xamarin.Cards >= 19.1.0.69",
+      "Syncfusion.Xamarin.SfBusyIndicator >= 19.1.0.69",
+      "Syncfusion.Xamarin.SfListView >= 19.1.0.69",
+      "Syncfusion.Xamarin.SfPopupLayout >= 19.1.0.69",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
       "Xamarin.Forms.Visual.Material >= 5.0.0.2012"
@@ -1862,11 +2174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe.iOS\\Safe.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\egome\\Documents\\GitHub\\safe.Xamarin\\Safe\\Safe.iOS\\Safe.iOS.csproj",
       "projectName": "Safe.iOS",
-      "projectPath": "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe.iOS\\Safe.iOS.csproj",
+      "projectPath": "C:\\Users\\egome\\Documents\\GitHub\\safe.Xamarin\\Safe\\Safe.iOS\\Safe.iOS.csproj",
       "packagesPath": "C:\\Users\\egome\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe.iOS\\obj\\",
+      "outputPath": "C:\\Users\\egome\\Documents\\GitHub\\safe.Xamarin\\Safe\\Safe.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1889,8 +2201,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe\\Safe.csproj": {
-              "projectPath": "C:\\Users\\egome\\Documents\\GitRepos\\safe.Xamarin\\Safe\\Safe\\Safe.csproj"
+            "C:\\Users\\egome\\Documents\\GitHub\\safe.Xamarin\\Safe\\Safe\\Safe.csproj": {
+              "projectPath": "C:\\Users\\egome\\Documents\\GitHub\\safe.Xamarin\\Safe\\Safe\\Safe.csproj"
             }
           }
         }
@@ -1899,25 +2211,33 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.1.0.514, )"
+          },
           "PropertyChanged.Fody": {
             "target": "Package",
             "version": "[3.4.0, )"
           },
           "Syncfusion.Licensing": {
             "target": "Package",
-            "version": "[19.1.0.67, )"
+            "version": "[19.1.0.69, )"
+          },
+          "Syncfusion.Xamarin.Cards": {
+            "target": "Package",
+            "version": "[19.1.0.69, )"
           },
           "Syncfusion.Xamarin.SfBusyIndicator": {
             "target": "Package",
-            "version": "[19.1.0.67, )"
+            "version": "[19.1.0.69, )"
           },
           "Syncfusion.Xamarin.SfListView": {
             "target": "Package",
-            "version": "[19.1.0.67, )"
+            "version": "[19.1.0.69, )"
           },
           "Syncfusion.Xamarin.SfPopupLayout": {
             "target": "Package",
-            "version": "[19.1.0.67, )"
+            "version": "[19.1.0.69, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

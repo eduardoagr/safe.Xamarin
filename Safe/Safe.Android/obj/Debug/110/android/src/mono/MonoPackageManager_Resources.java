@@ -3,9 +3,14 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Safe.Android.dll" comes first in this list. */
 		"Safe.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"FormsViewGroup.dll",
+		"Newtonsoft.Json.dll",
 		"PropertyChanged.dll",
 		"Safe.dll",
+		"Syncfusion.Cards.XForms.Android.dll",
+		"Syncfusion.Cards.XForms.dll",
 		"Syncfusion.Core.XForms.Android.dll",
 		"Syncfusion.Core.XForms.dll",
 		"Syncfusion.DataSource.Portable.dll",

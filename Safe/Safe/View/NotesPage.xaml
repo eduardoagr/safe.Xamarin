@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Safe.View.NotesPage"
+             xmlns:vm="clr-namespace:Safe.ViewModel" 
+             xmlns:model="clr-namespace:Safe.Model"
+             xmlns:fi="clr-namespace:MaterialFonts.Fonts"
+             Visual="Material"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+
+    <ContentPage.BindingContext>
+        <vm:NotesVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout x:DataType="vm:NotesVM">
+            <syncfusion:SfListView x:Name="NoteBookLV" 
+                                      AutoFitMode="Height" 
+                                      ItemsSource="{x:Binding NotesCollection}">
+
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Note">
+                        <Grid Padding="5" RowDefinitions="20,50">
+                            <Label Text="{x:Binding CreatedAt, StringFormat='Created on: {0}'}"
+                                   FontAttributes="Bold"
+                                   BackgroundColor="Gray"/>
+                            <StackLayout Grid.Row="1"
+                                         Orientation="Horizontal">
+                                <Label Text="{x:Static fi:IconFonts.Note}"
+                                       FontFamily="material" 
+                                       VerticalTextAlignment="Center"
+                                       FontSize="40"/>
+                                <Label Text="{x:Binding Title,StringFormat='Name: {0}'}"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+            <Button Text="{x:Static fi:IconFonts.Plus}" 
+                    FontSize="30"
+                    HorizontalOptions="EndAndExpand"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    BorderWidth="2"
+                    BorderColor="Gray"
+                    CornerRadius="100"
+                    Margin="30"
+                    FontFamily="material"
+                    VerticalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

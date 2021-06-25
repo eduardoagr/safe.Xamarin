@@ -9,6 +9,7 @@ using Syncfusion.ListView.XForms;
 
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
 
@@ -34,7 +35,6 @@ namespace Safe.ViewModel {
                 var result = await Application.Current.MainPage.DisplayPromptAsync(string.Empty,
                     "Notebook name?");
 
-
                 if (!string.IsNullOrEmpty(result)) {
                     var notebook = new Notebook() {
                         Name = result,
@@ -47,13 +47,15 @@ namespace Safe.ViewModel {
                     return;
                 }
             });
+            GetNotebooksAsync();
             SelectedNoteBookCommand = new Command(async () => {
                 await Application.Current.MainPage.Navigation.PushAsync(new NotesPage());
-                MessagingCenter.Send(this, "details", SelectedNotebook);
+                MessagingCenter.Send(this, "data", SelectedNotebook);
                 SelectedNotebook = null;
+    
             });
             ChangeLayoutCommand = new Command(OnChangeLayout);
-            GetNotebooksAsync();
+            
         }
         private async void GetNotebooksAsync() {
             var notebooks = await Database.ReadAsync<Notebook>();

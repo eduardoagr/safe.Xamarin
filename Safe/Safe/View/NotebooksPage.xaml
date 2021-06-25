@@ -13,7 +13,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{x:Binding ChangeLayoutCommand}">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="{x:Static fi:IconFonts.Grid}"/>
+                <FontImageSource Glyph="{x:Static fi:IconFonts.Grid}"
+                                 FontFamily="material"/>
             </ToolbarItem.IconImageSource>
         </ToolbarItem> 
     </ContentPage.ToolbarItems>
@@ -33,7 +34,7 @@
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:DataType="model:Notebook">
                         <Grid Padding="5" RowDefinitions="20,50">
-                            <Label Text="{x:Binding CreatedAt, StringFormat='Created on: {0}'}"
+                            <Label Text="{x:Binding CreatedAt}"
                                    FontAttributes="Bold"
                                    BackgroundColor="Gray"/>
                             <StackLayout Grid.Row="1"

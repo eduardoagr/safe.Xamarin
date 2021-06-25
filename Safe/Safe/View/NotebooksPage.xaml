@@ -11,7 +11,11 @@
              Visual="Material">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{x:Static fi:IconFonts.ViewGridOutline}" Command="{x:Binding ChangeLayoutCommand}"/>
+        <ToolbarItem Command="{x:Binding ChangeLayoutCommand}">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static fi:IconFonts.Grid}"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem> 
     </ContentPage.ToolbarItems>
 
     <ContentPage.BindingContext>
@@ -24,7 +28,8 @@
                                       AutoFitMode="Height" 
                                       ItemsSource="{x:Binding NotebooksCollection}"
                                       SelectionChangedCommand="{x:Binding SelectedNoteBookCommand}"
-                                      SelectedItem="{x:Binding SelectedNotebook}">
+                                      SelectedItem="{x:Binding SelectedNotebook}"
+                                      LayoutManager="{x:Binding LayoutBase }">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:DataType="model:Notebook">
                         <Grid Padding="5" RowDefinitions="20,50">

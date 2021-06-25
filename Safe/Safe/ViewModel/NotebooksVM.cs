@@ -1,4 +1,5 @@
-﻿using PropertyChanged;
+﻿
+using PropertyChanged;
 
 using Safe.Firebase;
 using Safe.Model;
@@ -24,6 +25,9 @@ namespace Safe.ViewModel {
         public LayoutBase LayoutBase { get; set; }
 
         public NotebooksVM() {
+
+            LayoutBase = new LinearLayout();
+
             NotebooksCollection = new ObservableCollection<Notebook>();
 
             CreateNewNotebook = new Command(async () => {

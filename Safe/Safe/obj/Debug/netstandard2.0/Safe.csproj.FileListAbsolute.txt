@@ -30,3 +30,4 @@ C:\Users\egome\Documents\GitHub\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\
 C:\Users\egome\Documents\GitHub\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\ref\Safe.dll
 C:\Users\egome\Documents\GitHub\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\Safe.pdb
 C:\Users\egome\Documents\GitHub\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\View\NotebooksPage.xaml.g.cs
+C:\Users\egome\Documents\GitHub\safe.Xamarin\Safe\Safe\obj\Debug\netstandard2.0\View\EditorPage.xaml.g.cs

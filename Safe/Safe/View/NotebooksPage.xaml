@@ -10,6 +10,10 @@
              xmlns:model="clr-namespace:Safe.Model"
              Visual="Material">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{x:Static fi:IconFonts.ViewGridOutline}" Command="{x:Binding ChangeLayoutCommand}"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.BindingContext>
         <vm:NotebooksVM/>
     </ContentPage.BindingContext>

@@ -43,6 +43,7 @@
                     WidthRequest="50"
                     HeightRequest="50"
                     BorderWidth="2"
+                    Command="{x:Binding CreateNewNote}"
                     BorderColor="Gray"
                     CornerRadius="100"
                     Margin="30"

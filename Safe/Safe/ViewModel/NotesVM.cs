@@ -3,9 +3,7 @@ using Safe.Model;
 
 using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
 using Xamarin.Forms;
@@ -20,22 +18,18 @@ namespace Safe.ViewModel {
 
             NotesCollection = new ObservableCollection<Note>();
 
+            CreateNewNoteCommand = new Command(() => {
+                CeateNote(RecivedNotebook);
+            });
+
             MessagingCenter.Subscribe<NotebooksVM, Notebook>(this, "data",
             async (sender, data) => {
-                if (data != null) {
-                    RecivedNotebook = data;
-                } else {
-                    return;
-                }
-
-                CreateNewNoteCommand = new Command(() => {CeateNote(RecivedNotebook);});
-
-
+                RecivedNotebook = data;
                 var notes = await Database.ReadAsync<Note>();
                 if (notes != null) {
-                    notes.Where(n => n.NotebookId == RecivedNotebook.Id);
+                    var newNotes = notes.Where(n => n.NotebookId == RecivedNotebook.Id);
                     NotesCollection.Clear();
-                    foreach (var item in notes) {
+                    foreach (var item in newNotes) {
                         NotesCollection.Add(item);
                     }
                 }

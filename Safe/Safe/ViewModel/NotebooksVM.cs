@@ -1,4 +1,6 @@
 ﻿
+using MaterialFonts.Fonts;
+
 using PropertyChanged;
 
 using Safe.Firebase;
@@ -23,7 +25,7 @@ namespace Safe.ViewModel {
         public ICommand CreateNewNotebook { get; set; }
         public ICommand SelectedNoteBookCommand { get; set; }
         public Notebook SelectedNotebook { get; set; }
-        public LayoutBase LayoutBase { get; set; }
+        public LayoutBase LayoutBase { get; set; } 
 
         public NotebooksVM() {
 
@@ -68,7 +70,6 @@ namespace Safe.ViewModel {
 
             }
         }
-
         private void OnChangeLayout(object obj) {
             if (LayoutBase is LinearLayout) {
                 LayoutBase = new GridLayout();

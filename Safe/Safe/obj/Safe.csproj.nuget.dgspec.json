@@ -66,23 +66,23 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.44, )"
             },
             "Syncfusion.Xamarin.Cards": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.44, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.44, )"
             },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.44, )"
             },
             "Syncfusion.Xamarin.SfPopupLayout": {
               "target": "Package",
-              "version": "[19.1.0.69, )"
+              "version": "[19.2.0.44, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

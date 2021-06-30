@@ -55,7 +55,7 @@ namespace Safe.Firebase {
             string jsonBody = JsonConvert.SerializeObject(Item);
             var content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
             using (HttpClient client = new HttpClient()) {
-                var res = await client.PutAsync($"{FirebadeDb}{Item.GetType().Name.ToLower()}/{Item.Id}.json",
+                var res = await client.PatchAsync($"{FirebadeDb}{Item.GetType().Name.ToLower()}/{Item.Id}.json",
                     content);
                 if (res.IsSuccessStatusCode) {
                     return true;

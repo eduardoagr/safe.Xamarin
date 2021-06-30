@@ -8,6 +8,15 @@
              Visual="Material"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{x:Binding ChangeLayoutCommand}">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static fi:IconFonts.Grid}"
+                                 FontFamily="material"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.BindingContext>
         <vm:NotesVM/>
     </ContentPage.BindingContext>
@@ -15,8 +24,8 @@
         <StackLayout x:DataType="vm:NotesVM">
             <syncfusion:SfListView x:Name="NoteBookLV" 
                                       AutoFitMode="Height" 
-                                      ItemsSource="{x:Binding NotesCollection}">
-
+                                      ItemsSource="{x:Binding NotesCollection}"
+                                      LayoutManager="{x:Binding LayoutBase}">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:DataType="model:Note">
                         <Grid Padding="5" RowDefinitions="20,50">

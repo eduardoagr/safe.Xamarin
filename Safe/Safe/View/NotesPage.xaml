@@ -6,6 +6,7 @@
              xmlns:model="clr-namespace:Safe.Model"
              xmlns:fi="clr-namespace:MaterialFonts.Fonts"
              Visual="Material"
+             Title="Notes"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
 
     <ContentPage.ToolbarItems>
@@ -25,7 +26,9 @@
             <syncfusion:SfListView x:Name="NoteBookLV" 
                                       AutoFitMode="Height" 
                                       ItemsSource="{x:Binding NotesCollection}"
-                                      LayoutManager="{x:Binding LayoutBase}">
+                                      SelectedItem="{x:Binding SelectedNote}"
+                                      LayoutManager="{x:Binding LayoutBase}"
+                                      SelectionChangedCommand="{x:Binding SelectedNoteCommand}">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:DataType="model:Note">
                         <Grid Padding="5" RowDefinitions="20,50">

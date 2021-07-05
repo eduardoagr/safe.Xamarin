@@ -3,13 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Safe.View.EditorPage"
              xmlns:vm="clr-namespace:Safe.ViewModel"
+              xmlns:fi="clr-namespace:MaterialFonts.Fonts" xmlns:richtexteditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+             Visual="Material"
              x:DataType="vm:EditorVM">
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ContentPage.BindingContext>
+        <vm:EditorVM/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{x:Binding SaveContent}">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource Glyph="{x:Static fi:IconFonts.ContentSave}"
+                                 FontFamily="material"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <richtexteditor:SfRichTextEditor VerticalOptions="FillAndExpand" 
+                                         Text="{x:Binding Text}" />
+    </StackLayout>
 </ContentPage>

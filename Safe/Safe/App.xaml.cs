@@ -3,19 +3,24 @@ using Safe.View;
 
 using Syncfusion.Licensing;
 
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Safe {
     public partial class App : Application {
-        private const string KEY = "NDU4ODU0QDMxMzkyZTMxMmUzMEt2UE5NVkJRbU5Ud3lFT0oyWVVPWWU0a2gzLzZPbmN0dm5TYS9La2UybzA9";
+        private const string KEY = "NDY1Njk2QDMxMzkyZTMyMmUzMExaM3hGVTJlQUhTQjJUclR5K1BCaFlFb0dTalpkZGF0SU1BZk1ZVzN6T009";
         public static string UserId = string.Empty;
         public App() {
             SyncfusionLicenseProvider.RegisterLicense(KEY);
+            NetworkAccess current = Connectivity.NetworkAccess;
+
             InitializeComponent();
 
-
-            MainPage = new LoginPage();
-
+            if (current == NetworkAccess.Internet) {
+                MainPage = new LoginPage();
+            } else {
+                MainPage = new NoInternetPage();
+            }
         }
 
         protected override void OnStart() {
@@ -25,6 +30,7 @@ namespace Safe {
         }
 
         protected override void OnResume() {
+
         }
     }
 }

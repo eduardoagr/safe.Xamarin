@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[7.1.0.514, )"
             },
+            "Com.Airbnb.Xamarin.Forms.Lottie": {
+              "target": "Package",
+              "version": "[4.0.10, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -81,6 +85,10 @@
               "version": "[19.2.0.44, )"
             },
             "Syncfusion.Xamarin.SfPopupLayout": {
+              "target": "Package",
+              "version": "[19.2.0.44, )"
+            },
+            "Syncfusion.Xamarin.SfRichTextEditor": {
               "target": "Package",
               "version": "[19.2.0.44, )"
             },

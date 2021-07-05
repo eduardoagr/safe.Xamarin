@@ -27,6 +27,39 @@
           "lib/MonoAndroid81/AndHUD.dll": {}
         }
       },
+      "Com.Airbnb.Android.Lottie/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Square.OkIO": "1.17.4",
+          "Xamarin.AndroidX.AppCompat": "1.1.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Lottie.Android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Lottie.Android.dll": {}
+        }
+      },
+      "Com.Airbnb.Xamarin.Forms.Lottie/4.0.10": {
+        "type": "package",
+        "dependencies": {
+          "Com.Airbnb.Android.Lottie": "3.7.0",
+          "Xamarin.AndroidX.AppCompat": "1.1.0",
+          "Xamarin.Forms": "4.5.0.657"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Lottie.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Lottie.Forms.dll": {}
+        }
+      },
       "Fody/6.5.1": {
         "type": "package",
         "build": {
@@ -57,6 +90,18 @@
           "build/PropertyChanged.Fody.props": {}
         }
       },
+      "Square.OkIO/1.17.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Square.OkIO.dll": {}
+        }
+      },
       "Syncfusion.Licensing/19.2.0.44": {
         "type": "package",
         "compile": {
@@ -64,6 +109,21 @@
         },
         "runtime": {
           "lib/MonoAndroid10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/19.2.0.44": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.2.0.44",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.Cards/19.2.0.44": {
@@ -131,6 +191,21 @@
           "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/19.2.0.44": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.2.0.44",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/19.2.0.44": {
         "type": "package",
         "dependencies": {
@@ -148,6 +223,23 @@
           "lib/MonoAndroid10.0/Syncfusion.SfListView.XForms.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfPicker/19.2.0.44": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.2.0.44",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfPopupLayout/19.2.0.44": {
         "type": "package",
         "dependencies": {
@@ -161,6 +253,25 @@
         "runtime": {
           "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.Android.dll": {},
           "lib/MonoAndroid10.0/Syncfusion.SfPopupLayout.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRichTextEditor/19.2.0.44": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Buttons": "19.2.0.44",
+          "Syncfusion.Xamarin.Core": "19.2.0.44",
+          "Syncfusion.Xamarin.SfComboBox": "19.2.0.44",
+          "Syncfusion.Xamarin.SfPicker": "19.2.0.44",
+          "Syncfusion.Xamarin.SfPopupLayout": "19.2.0.44",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1153,6 +1264,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.514",
+          "Com.Airbnb.Xamarin.Forms.Lottie": "4.0.10",
           "Newtonsoft.Json": "13.0.1",
           "PropertyChanged.Fody": "3.4.0",
           "Syncfusion.Licensing": "19.2.0.44",
@@ -1160,6 +1272,7 @@
           "Syncfusion.Xamarin.SfBusyIndicator": "19.2.0.44",
           "Syncfusion.Xamarin.SfListView": "19.2.0.44",
           "Syncfusion.Xamarin.SfPopupLayout": "19.2.0.44",
+          "Syncfusion.Xamarin.SfRichTextEditor": "19.2.0.44",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "Xamarin.Forms.Visual.Material": "5.0.0.2012"
@@ -1219,6 +1332,62 @@
         "andhud.1.4.2.nupkg.sha512",
         "andhud.nuspec",
         "lib/MonoAndroid81/AndHUD.dll"
+      ]
+    },
+    "Com.Airbnb.Android.Lottie/3.7.0": {
+      "sha512": "AhMdbb4sE0d1deJceahhKht+H0YLiqD8E7zXRQn935B3zH2uVrY9rzBdUj8rPeGRhwFIpTQcU/WbDnGuHyqTbA==",
+      "type": "package",
+      "path": "com.airbnb.android.lottie/3.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.android.lottie.3.7.0.nupkg.sha512",
+        "com.airbnb.android.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Android.dll",
+        "lib/monoandroid10.0/Lottie.Android.pdb",
+        "lib/monoandroid10.0/Lottie.Android.xml",
+        "readme.txt"
+      ]
+    },
+    "Com.Airbnb.Xamarin.Forms.Lottie/4.0.10": {
+      "sha512": "8FjZg6fCRcH3s1elgAiMEiX1CF5alaUCsNUG0I16pcycZAXeh2P4ZU+c1PRVnA/GwyBAQLU+yV/jWhW2ORNgkw==",
+      "type": "package",
+      "path": "com.airbnb.xamarin.forms.lottie/4.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "com.airbnb.xamarin.forms.lottie.4.0.10.nupkg.sha512",
+        "com.airbnb.xamarin.forms.lottie.nuspec",
+        "icon.png",
+        "lib/monoandroid10.0/Lottie.Forms.dll",
+        "lib/monoandroid10.0/Lottie.Forms.pdb",
+        "lib/monoandroid10.0/Lottie.Forms.xml",
+        "lib/net472/Lottie.Forms.dll",
+        "lib/net472/Lottie.Forms.pdb",
+        "lib/net472/Lottie.Forms.xml",
+        "lib/netcoreapp3.1/Lottie.Forms.dll",
+        "lib/netcoreapp3.1/Lottie.Forms.pdb",
+        "lib/netcoreapp3.1/Lottie.Forms.xml",
+        "lib/netstandard2.0/Lottie.Forms.dll",
+        "lib/netstandard2.0/Lottie.Forms.pdb",
+        "lib/netstandard2.0/Lottie.Forms.xml",
+        "lib/tizen40/Lottie.Forms.dll",
+        "lib/tizen40/Lottie.Forms.pdb",
+        "lib/tizen40/Lottie.Forms.xml",
+        "lib/uap10.0.17763/Lottie.Forms.dll",
+        "lib/uap10.0.17763/Lottie.Forms.pdb",
+        "lib/uap10.0.17763/Lottie.Forms.pri",
+        "lib/uap10.0.17763/Lottie.Forms.xml",
+        "lib/xamarinios10/Lottie.Forms.dll",
+        "lib/xamarinios10/Lottie.Forms.pdb",
+        "lib/xamarinios10/Lottie.Forms.xml",
+        "lib/xamarinmac20/Lottie.Forms.dll",
+        "lib/xamarinmac20/Lottie.Forms.pdb",
+        "lib/xamarinmac20/Lottie.Forms.xml",
+        "readme.txt"
       ]
     },
     "Fody/6.5.1": {
@@ -1303,6 +1472,18 @@
         "weaver/PropertyChanged.Fody.xcf"
       ]
     },
+    "Square.OkIO/1.17.4": {
+      "sha512": "5yvgtYo52ZYThVjpfI2tZrCs1gmShrO3D+LNhmsYHT5a9hP6CUb/fxLgT0SW4hOcjgYcBwJEo5aaKrOSHv8Jeg==",
+      "type": "package",
+      "path": "square.okio/1.17.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/Square.OkIO.dll",
+        "square.okio.1.17.4.nupkg.sha512",
+        "square.okio.nuspec"
+      ]
+    },
     "Syncfusion.Licensing/19.2.0.44": {
       "sha512": "XekMdME0qXUzX3uJSxVV6FgeC3ydgxpETMmtjck8enzpjKhlAU692uAVtyqAkecqa4YFJmXiKV/zEkKfjdLVWA==",
       "type": "package",
@@ -1330,6 +1511,40 @@
         "lib/uap10.0/Syncfusion.Licensing.dll",
         "syncfusion.licensing.19.2.0.44.nupkg.sha512",
         "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Buttons/19.2.0.44": {
+      "sha512": "eo4wKfu0IQNl9eSM6CTDVlzKYXgjnv3G4eH+aONnFfrBdAQRboL0mBiDyR4tvDBjRKcOnTMbzeiRJlEm5OBhRQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.buttons/19.2.0.44",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.xml",
+        "lib/MonoAndroid90/Syncfusion.Buttons.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.Buttons.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.Buttons.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/SfButton.ttf",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/sfbutton_Segoe MDL2 Assets.ttf",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Properties/Syncfusion.Buttons.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Syncfusion.Buttons.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
+        "syncfusion.xamarin.buttons.19.2.0.44.nupkg.sha512",
+        "syncfusion.xamarin.buttons.nuspec"
       ]
     },
     "Syncfusion.Xamarin.Cards/19.2.0.44": {
@@ -1477,6 +1692,40 @@
         "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
+    "Syncfusion.Xamarin.SfComboBox/19.2.0.44": {
+      "sha512": "dRPcYBYzNKxHPIL/1WUsM0/Zymye3uR5R6bPHFiQaJG6qt/Wupe6HtZo18cWqPvj7sz6ALvSSa6b3f/Z/7oaSA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcombobox/19.2.0.44",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid90/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.19.2.0.44.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec"
+      ]
+    },
     "Syncfusion.Xamarin.SfListView/19.2.0.44": {
       "sha512": "CZeNoR5IkQyrz7YNRdcaX6wNNmK/3Hapt9wMf1FE2On57zfP6RhPR8s3U5d9PVoGIkuGWRqMHnWzWNqDm27fvg==",
       "type": "package",
@@ -1505,6 +1754,40 @@
         "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
         "syncfusion.xamarin.sflistview.19.2.0.44.nupkg.sha512",
         "syncfusion.xamarin.sflistview.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfPicker/19.2.0.44": {
+      "sha512": "cnHRciRv6yPRdvnbaehC1RM+VyWJBS48sGnmSb4WTgXQ3tEV7Wa+7PuccePHTmXkhKQ99zVUPmsnhPd2qHyTgA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfpicker/19.2.0.44",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.Android.xml",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/MonoAndroid10.0/Syncfusion.SfPicker.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.Android.xml",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.XML",
+        "lib/MonoAndroid90/Syncfusion.SfPicker.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfPicker.iOS.xml",
+        "lib/netstandard2.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfPicker.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPicker.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfPicker.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfPicker.XForms.dll",
+        "syncfusion.xamarin.sfpicker.19.2.0.44.nupkg.sha512",
+        "syncfusion.xamarin.sfpicker.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfPopupLayout/19.2.0.44": {
@@ -1541,6 +1824,38 @@
         "lib/uap10.0/Syncfusion.SfPopupLayout.XForms.xml",
         "syncfusion.xamarin.sfpopuplayout.19.2.0.44.nupkg.sha512",
         "syncfusion.xamarin.sfpopuplayout.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRichTextEditor/19.2.0.44": {
+      "sha512": "1GgohRBZsG2JPXD5x8zUgSo2gEjXKClg02fkbf1F/DpMCZfY83jcq7kC6eQdJiwCBTMwkA9rGnJ30jiJpf4NTg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfrichtexteditor/19.2.0.44",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfRichTextEditor.XForms.xml",
+        "lib/MonoAndroid90/Syncfusion.SfRichTextEditor.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.SfRichTextEditor.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRichTextEditor.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRichTextEditor.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfRichTextEditor.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfRichTextEditor.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP/Content/materialupdated.css",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP/Content/richtexteditor.html",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP/Content/rte.min.js",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.UWP/V3 Xamarin iOS uwp new.ttf",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfRichTextEditor.XForms.xml",
+        "syncfusion.xamarin.sfrichtexteditor.19.2.0.44.nupkg.sha512",
+        "syncfusion.xamarin.sfrichtexteditor.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -2714,6 +3029,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
       "Acr.UserDialogs >= 7.1.0.514",
+      "Com.Airbnb.Xamarin.Forms.Lottie >= 4.0.10",
       "PropertyChanged.Fody >= 3.4.0",
       "Safe >= 1.0.0",
       "Syncfusion.Licensing >= 19.2.0.44",
@@ -2721,6 +3037,7 @@
       "Syncfusion.Xamarin.SfBusyIndicator >= 19.2.0.44",
       "Syncfusion.Xamarin.SfListView >= 19.2.0.44",
       "Syncfusion.Xamarin.SfPopupLayout >= 19.2.0.44",
+      "Syncfusion.Xamarin.SfRichTextEditor >= 19.2.0.44",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
       "Xamarin.Forms.Visual.Material >= 5.0.0.2012"
@@ -2775,6 +3092,10 @@
             "target": "Package",
             "version": "[7.1.0.514, )"
           },
+          "Com.Airbnb.Xamarin.Forms.Lottie": {
+            "target": "Package",
+            "version": "[4.0.10, )"
+          },
           "PropertyChanged.Fody": {
             "target": "Package",
             "version": "[3.4.0, )"
@@ -2796,6 +3117,10 @@
             "version": "[19.2.0.44, )"
           },
           "Syncfusion.Xamarin.SfPopupLayout": {
+            "target": "Package",
+            "version": "[19.2.0.44, )"
+          },
+          "Syncfusion.Xamarin.SfRichTextEditor": {
             "target": "Package",
             "version": "[19.2.0.44, )"
           },

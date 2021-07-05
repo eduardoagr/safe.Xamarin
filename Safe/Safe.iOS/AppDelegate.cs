@@ -1,6 +1,9 @@
 ﻿
 using Foundation;
 
+using Syncfusion.XForms.iOS.PopupLayout;
+using Syncfusion.XForms.iOS.RichTextEditor;
+
 using UIKit;
 
 namespace Safe.iOS {
@@ -18,7 +21,8 @@ namespace Safe.iOS {
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             Xamarin.Forms.Forms.Init();
-            Syncfusion.XForms.iOS.PopupLayout.SfPopupLayoutRenderer.Init();
+            SfRichTextEditorRenderer.Init();
+            SfPopupLayoutRenderer.Init();
             Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App());
 

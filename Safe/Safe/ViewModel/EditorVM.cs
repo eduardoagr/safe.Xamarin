@@ -1,21 +1,32 @@
-﻿using System.Windows.Input;
+﻿using PropertyChanged;
+
+using Safe.Model;
+
+using System;
+using System.Diagnostics;
+using System.Windows.Input;
 
 using Xamarin.Forms;
 
 namespace Safe.ViewModel {
+    
+    [AddINotifyPropertyChangedInterface]
     public class EditorVM {
-        public ICommand SpeakBton { get; set; }
         public string Title { get; set; }
+        public string Text { get; set; }
+        public ICommand SaveContent { get; set; }
+        public Note RecivedNote { get; set; }
         public EditorVM() {
 
-            SpeakBton = new Command(() => {
-
+            SaveContent = new Command(() => { UpdateNote(); });
+            MessagingCenter.Subscribe<NotesVM, Note>(this, "note", (obj, item) => {
+                RecivedNote = item;
+                Title = RecivedNote.Title;
             });
+        }
 
-            MessagingCenter.Subscribe<NotebooksVM, string>(this, "details",
-               (obj, item) => {
-                   Title = item;
-               });
+        private void UpdateNote() {
+            throw new NotImplementedException();
         }
     }
 }

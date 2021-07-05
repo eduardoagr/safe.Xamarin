@@ -24,6 +24,8 @@ namespace Safe.Droid {
             Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            Window.SetSoftInputMode(Android.Views.SoftInput.AdjustResize);
+
             Instance = this;
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults) {

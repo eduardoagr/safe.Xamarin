@@ -1,66 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Safe.View.NotesPage"
-             xmlns:vm="clr-namespace:Safe.ViewModel" 
-             xmlns:model="clr-namespace:Safe.Model"
-             xmlns:fi="clr-namespace:MaterialFonts.Fonts"
-             Visual="Material"
-             Title="Notes"
-             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms">
+<ContentPage
+    x:Class="Safe.View.NotesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fi="clr-namespace:MaterialFonts.Fonts"
+    xmlns:model="clr-namespace:Safe.Model"
+    xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:vm="clr-namespace:Safe.ViewModel"
+    x:DataType="vm:NotesVM"
+    Title="{x:Binding RecivedNotebook.Name}"
+    Visual="Material">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{x:Binding ChangeLayoutCommand}">
-            <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="{x:Static fi:IconFonts.Grid}"
-                                 FontFamily="material"/>
-            </ToolbarItem.IconImageSource>
-        </ToolbarItem>
+        <ToolbarItem Command="{x:Binding ChangeLayoutCommand}" IconImageSource="{x:Binding Glyph}" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.BindingContext>
-        <vm:NotesVM/>
+        <vm:NotesVM />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout x:DataType="vm:NotesVM">
-            <syncfusion:SfListView x:Name="NoteBookLV" 
-                                      AutoFitMode="Height" 
-                                      ItemsSource="{x:Binding NotesCollection}"
-                                      SelectedItem="{x:Binding SelectedNote}"
-                                      LayoutManager="{x:Binding LayoutBase}"
-                                      SelectionChangedCommand="{x:Binding SelectedNoteCommand}">
+        <StackLayout>
+            <syncfusion:SfListView
+                x:Name="NoteBookLV"
+                AutoFitMode="Height"
+                ItemsSource="{x:Binding NotesCollection}"
+                LayoutManager="{x:Binding LayoutBase}"
+                SelectedItem="{x:Binding SelectedNote}"
+                SelectionChangedCommand="{x:Binding SelectedNoteCommand}">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:DataType="model:Note">
                         <Grid Padding="5" RowDefinitions="20,50">
-                            <Label Text="{x:Binding CreatedAt, StringFormat='Created on: {0}'}"
-                                   FontAttributes="Bold"
-                                   BackgroundColor="Gray"/>
-                            <StackLayout Grid.Row="1"
-                                         Orientation="Horizontal">
-                                <Label Text="{x:Static fi:IconFonts.Note}"
-                                       FontFamily="material" 
-                                       VerticalTextAlignment="Center"
-                                       FontSize="40"/>
-                                <Label Text="{x:Binding Title,StringFormat='Name: {0}'}"
-                                       FontAttributes="Bold"
-                                       VerticalTextAlignment="Center"/>
+                            <Label
+                                BackgroundColor="Gray"
+                                FontAttributes="Bold"
+                                Text="{x:Binding CreatedAt,
+                                                 StringFormat='Created on: {0}'}" />
+                            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                <Label
+                                    FontFamily="material"
+                                    FontSize="40"
+                                    Text="{x:Static fi:IconFonts.Note}"
+                                    VerticalTextAlignment="Center" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    Text="{x:Binding Title,
+                                                     StringFormat='Name: {0}'}"
+                                    VerticalTextAlignment="Center" />
                             </StackLayout>
                         </Grid>
                     </DataTemplate>
                 </syncfusion:SfListView.ItemTemplate>
             </syncfusion:SfListView>
-            <Button Text="{x:Static fi:IconFonts.Plus}" 
-                    FontSize="30"
-                    HorizontalOptions="EndAndExpand"
-                    WidthRequest="50"
-                    HeightRequest="50"
-                    BorderWidth="2"
-                    Command="{x:Binding CreateNewNoteCommand}"
-                    BorderColor="Gray"
-                    CornerRadius="100"
-                    Margin="30"
-                    FontFamily="material"
-                    VerticalOptions="End"/>
+            <Button
+                Margin="30"
+                BorderColor="Gray"
+                BorderWidth="2"
+                Command="{x:Binding CreateNewNoteCommand}"
+                CornerRadius="100"
+                FontFamily="material"
+                FontSize="30"
+                HeightRequest="50"
+                HorizontalOptions="EndAndExpand"
+                Text="{x:Static fi:IconFonts.Plus}"
+                VerticalOptions="End"
+                WidthRequest="50" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

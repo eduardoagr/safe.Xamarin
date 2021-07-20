@@ -1,27 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Safe.View.EditorPage"
-             xmlns:vm="clr-namespace:Safe.ViewModel"
-              xmlns:fi="clr-namespace:MaterialFonts.Fonts" xmlns:richtexteditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
-             Visual="Material"
-             x:DataType="vm:EditorVM">
+<ContentPage
+    x:Class="Safe.View.EditorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fi="clr-namespace:MaterialFonts.Fonts"
+    xmlns:richtexteditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
+    xmlns:vm="clr-namespace:Safe.ViewModel"
+    Title="{x:Binding RecivedNote.Title}"
+    x:DataType="vm:EditorVM"
+    Visual="Material">
 
     <ContentPage.BindingContext>
-        <vm:EditorVM/>
+        <vm:EditorVM />
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{x:Binding SaveContent}">
             <ToolbarItem.IconImageSource>
-                <FontImageSource Glyph="{x:Static fi:IconFonts.ContentSave}"
-                                 FontFamily="material"/>
+                <FontImageSource FontFamily="material" Glyph="{x:Static fi:IconFonts.ContentSave}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <richtexteditor:SfRichTextEditor VerticalOptions="FillAndExpand" 
-                                         Text="{x:Binding Text}" />
+        <richtexteditor:SfRichTextEditor Text="{x:Binding Text}" VerticalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>

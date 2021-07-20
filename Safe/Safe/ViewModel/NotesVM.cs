@@ -10,11 +10,9 @@ using Syncfusion.ListView.XForms;
 
 using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using System.Xml.Xsl;
 
 using Xamarin.Forms;
 
@@ -30,8 +28,13 @@ namespace Safe.ViewModel {
         public Note SelectedNote { get; set; }
         public ICommand SelectedNoteCommand { get; set; }
         public FontImageSource Glyph { get; set; }
-
         public NotesVM() {
+
+            Glyph = new FontImageSource() {
+                Glyph = IconFonts.FormatListBulleted,
+                FontFamily = "material",
+                Size = 44
+            };
 
             LayoutBase = new LinearLayout();
 
@@ -39,12 +42,16 @@ namespace Safe.ViewModel {
 
             CreateNewNoteCommand = new Command(async () => {
                 var note = await CreateNote(RecivedNotebook);
+                await Application.Current.MainPage.Navigation.PushAsync(new EditorPage());
+                MessagingCenter.Send(this, "note", note);
                 await GetNotes(RecivedNotebook);
             });
 
             SelectedNoteCommand = new Command(async () => {
                 await Application.Current.MainPage.Navigation.PushAsync(new EditorPage());
                 MessagingCenter.Send(this, "note", SelectedNote);
+                SelectedNote = null;
+
             });
 
             MessagingCenter.Subscribe<NotebooksVM, Notebook>(this, "data",
@@ -85,7 +92,7 @@ namespace Safe.ViewModel {
                 return null;
             }
         }
-        private void OnChangeLayout(object obj) {
+        private void OnChangeLayout() {
             if (LayoutBase is LinearLayout) {
                 LayoutBase = new GridLayout();
                 Glyph = new FontImageSource {
@@ -93,7 +100,6 @@ namespace Safe.ViewModel {
                     FontFamily = "material",
                     Size = 44
                 };
-                Debug.WriteLine("I am a grid");
             } else {
                 LayoutBase = new LinearLayout();
                 Glyph = new FontImageSource {
@@ -101,7 +107,6 @@ namespace Safe.ViewModel {
                     FontFamily = "material",
                     Size = 44
                 };
-
             }
         }
     }

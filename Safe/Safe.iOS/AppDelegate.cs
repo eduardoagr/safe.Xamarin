@@ -24,7 +24,6 @@ namespace Safe.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             Xamarin.Forms.Forms.Init();
             SfListViewRenderer.Init();
-            SfEffectsViewRenderer.Init();  //Initialize only when effects view is added to Listview.
             SfRichTextEditorRenderer.Init();
             SfPopupLayoutRenderer.Init();
             Xamarin.Forms.FormsMaterial.Init();

@@ -55,7 +55,7 @@
                 Margin="30"
                 BorderColor="Gray"
                 BorderWidth="2"
-                Command="{x:Binding CreateNewNotebook}"
+                Command="{x:Binding CreateNewNotebookCommand}"
                 CornerRadius="100"
                 FontFamily="material"
                 FontSize="30"

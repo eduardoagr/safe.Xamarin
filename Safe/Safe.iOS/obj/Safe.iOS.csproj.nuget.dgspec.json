@@ -58,39 +58,39 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.Cards": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfPopupLayout": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfRichTextEditor": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             }
           }
         }
@@ -173,39 +173,39 @@
             },
             "Syncfusion.Licensing": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.Cards": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfBusyIndicator": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfListView": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfPopupLayout": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Syncfusion.Xamarin.SfRichTextEditor": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.49, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             },
             "Xamarin.Forms.Visual.Material": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2083, )"
             }
           },
           "imports": [

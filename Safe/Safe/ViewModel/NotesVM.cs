@@ -41,10 +41,10 @@ namespace Safe.ViewModel {
             NotesCollection = new ObservableCollection<Note>();
 
             CreateNewNoteCommand = new Command(async () => {
-                var note = await CreateNote(RecivedNotebook);
+                var note = await CreateNoteAsync(RecivedNotebook);
                 await Application.Current.MainPage.Navigation.PushAsync(new EditorPage());
                 MessagingCenter.Send(this, "note", note);
-                await GetNotes(RecivedNotebook);
+                await GetNotesAsync(RecivedNotebook);
             });
 
             SelectedNoteCommand = new Command(async () => {
@@ -57,13 +57,13 @@ namespace Safe.ViewModel {
             MessagingCenter.Subscribe<NotebooksVM, Notebook>(this, "data",
             async (sender, data) => {
                 RecivedNotebook = data;
-                await GetNotes(RecivedNotebook);
+                await GetNotesAsync(RecivedNotebook);
             });
 
             ChangeLayoutCommand = new Command(OnChangeLayout);
         }
 
-        private async Task GetNotes(Notebook notebook) {
+        private async Task GetNotesAsync(Notebook notebook) {
             var notes = await Database.ReadAsync<Note>();
             if (notes != null) {
                 var newNotes = notes.Where(n => n.NotebookId == notebook.Id);
@@ -74,7 +74,7 @@ namespace Safe.ViewModel {
             }
         }
 
-        private async Task<Note> CreateNote(Notebook recivedNotebook) {
+        private async Task<Note> CreateNoteAsync(Notebook recivedNotebook) {
 
             var result = await Application.Current.MainPage.DisplayPromptAsync(string.Empty,
                  "Note name?");

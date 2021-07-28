@@ -22,7 +22,7 @@ namespace Safe.ViewModel {
     public class NotebooksVM {
         public ObservableCollection<Notebook> NotebooksCollection { get; set; }
         public ICommand ChangeLayoutCommand { get; set; }
-        public ICommand CreateNewNotebook { get; set; }
+        public ICommand CreateNewNotebookCommand { get; set; }
         public ICommand SelectedNoteBookCommand { get; set; }
         public Notebook SelectedNotebook { get; set; }
         public LayoutBase LayoutBase { get; set; }
@@ -40,8 +40,8 @@ namespace Safe.ViewModel {
 
             NotebooksCollection = new ObservableCollection<Notebook>();
 
-            CreateNewNotebook = new Command(async () => {
-                await CreateNote();
+            CreateNewNotebookCommand = new Command(async () => {
+                await CreateNewNotebookAsync();
             });
             GetNotebooksAsync();
             SelectedNoteBookCommand = new Command(async () => {
@@ -65,7 +65,7 @@ namespace Safe.ViewModel {
             }
         }
 
-        private async Task CreateNote() {
+        private async Task CreateNewNotebookAsync() {
             var result = await Application.Current.MainPage.DisplayPromptAsync(string.Empty,
                 "Notebook name?");
 

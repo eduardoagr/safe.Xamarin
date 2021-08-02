@@ -56,7 +56,7 @@ namespace Safe.ViewModel {
         private async void GetNotebooksAsync() {
             var notebooks = await Database.ReadAsync<Notebook>();
             if (notebooks != null) {
-                notebooks = notebooks.Where(n => n.Id == App.UserId).ToList();
+                notebooks = notebooks.Where(book => book.Id == App.UserId).ToList();
                 NotebooksCollection.Clear();
                 foreach (var item in notebooks)
                 {

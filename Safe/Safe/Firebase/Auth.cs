@@ -2,6 +2,7 @@
 
 using Safe.Model;
 
+using System;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
@@ -28,6 +29,7 @@ namespace Safe.Firebase {
                     string resutJson = await response.Content.ReadAsStringAsync();
                     var res = JsonConvert.DeserializeObject<AuthResult>(resutJson);
                     App.UserId = res.localId;
+                    Console.WriteLine($"**************************Register : {res.email} with token {res.localId}");
 
                     return true;
 
@@ -57,6 +59,7 @@ namespace Safe.Firebase {
                     string resutJson = await response.Content.ReadAsStringAsync();
                     var res = JsonConvert.DeserializeObject<AuthResult>(resutJson);
                     App.UserId = res.localId;
+                    Console.WriteLine($"**************************Login : {res.email} with token {res.localId}");
                     return true;
 
                 } else {

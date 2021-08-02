@@ -66,9 +66,9 @@ namespace Safe.ViewModel {
         private async Task GetNotesAsync(Notebook notebook) {
             var notes = await Database.ReadAsync<Note>();
             if (notes != null) {
-                var newNotes = notes.Where(n => n.NotebookId == notebook.Id);
+                notes.Where(n => n.NotebookId == notebook.Id).ToList();
                 NotesCollection.Clear();
-                foreach (var item in newNotes) {
+                foreach (var item in notes) {
                     NotesCollection.Add(item);
                 }
             }
